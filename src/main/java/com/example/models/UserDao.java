@@ -1,0 +1,17 @@
+package com.example.models;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.transaction.annotation.Transactional;
+
+/**
+ * Created by mark on 16-2-5.
+ */
+@Transactional
+public interface UserDao extends CrudRepository<User, Long> {
+
+    public User findByEmail(String email);
+
+
+
+
+}
